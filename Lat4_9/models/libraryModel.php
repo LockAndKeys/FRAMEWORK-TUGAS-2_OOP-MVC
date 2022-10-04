@@ -19,23 +19,7 @@ class LibraryModel
         if ($id) {
             $query = "SELECT * FROM book WHERE id = $id";
             $result = $this->connection->query($query);
-            if ($result->num_rows === 0) {
-                return false;
-            } else {
-                return $result->fetch_assoc();
-            }
-        } else {
-            $query = "SELECT * FROM book";
-            $result = $this->connection->query($query);
-            if ($result->num_rows === 0) {
-                return false;
-            } else {
-                while ($row = $result->fetch_assoc()) {
-                    $result[] = $row;
-                }
-
-                return $result;
-            }
+            return $result;
         }
     }
 }
