@@ -22,7 +22,6 @@
             <?php
             $no = 1;
             if ($listBuku) : foreach ($listBuku as $value) : ?>
-
                     <tr>
                         <td><?= $value["Judul"]; ?></td>
                         <td><?= $value["Pengarang"]; ?></td>
